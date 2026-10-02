@@ -1,77 +1,6 @@
 ﻿-país:
- Nombre: "Afganistán
- Capital: "Kabul
- Codigo: "AF
- Población: "26023100
- Aréa: "652230
- Moneda: "afgani afgano
- Codigo Moneda: "AFN
- Tasa Cambio USD: "64.860189
--país:
- Nombre: "Albania
- Capital: "Tirana
- Codigo: "AL
- Población: "2895947
- Aréa: "28748
- Moneda: "lek albanés
- Codigo Moneda: "ALL
- Tasa Cambio USD: "81.155017
--país:
- Nombre: "Alemania
- Capital: "Berlin
- Codigo: "DE
- Población: "80783000
- Aréa: "357114
- Moneda: "euro
- Codigo Moneda: "EUR
- Tasa Cambio USD: "0.881813
--país:
- Nombre: "Andorra
- Capital: "Andorra la Vella
- Codigo: "AD
- Población: "85000
- Aréa: "468
- Moneda: "euro
- Codigo Moneda: "EUR
- Tasa Cambio USD: "0.881813
--país:
- Nombre: "Angola
- Capital: "Luanda
- Codigo: "AO
- Población: "24383301
- Aréa: "1246700
- Moneda: "kuanza angoleño
- Codigo Moneda: "AOA
- Tasa Cambio USD: "924.717414
--país:
- Nombre: "Antigua y Barbuda
- Capital: "Saint John's
- Codigo: "AG
- Población: "86295
- Aréa: "442
- Moneda: "dólar del Caribe Oriental
- Codigo Moneda: "XCD
- Tasa Cambio USD: "2.7
--país:
- Nombre: "Arabia Saudí
- Capital: "Riyadh
- Codigo: "SA
- Población: "30770375
- Aréa: "2149690
- Moneda: "rial saudí
- Codigo Moneda: "SAR
- Tasa Cambio USD: "3.75
--país:
- Nombre: "Argelia
- Capital: "Algiers
- Codigo: "DZ
- Población: "38700000
- Aréa: "2381741
- Moneda: "dinar argelino
- Codigo Moneda: "DZD
- Tasa Cambio USD: "133.846029
--país:
  Nombre: "Argentina
+"
  Capital: "Buenos Aires
  Codigo: "AR
  Población: "42669500
@@ -80,65 +9,282 @@
  Codigo Moneda: "ARS
  Tasa Cambio USD: "1517.5209
 -país:
- Nombre: "Armenia
- Capital: "Yerevan
- Codigo: "AM
- Población: "3009800
- Aréa: "29743
- Moneda: "dram armenio
- Codigo Moneda: "AMD
- Tasa Cambio USD: "363.102577
+ Nombre: "Brasil
+"
+ Capital: "Brasília
+ Codigo: "BR
+ Población: "203586000
+ Aréa: "8515767
+ Moneda: "real brasileño
+ Codigo Moneda: "BRL
+ Tasa Cambio USD: "5.200393
 -país:
- Nombre: "Australia
- Capital: "Canberra
- Codigo: "AU
- Población: "23696900
- Aréa: "7692024
- Moneda: "dólar australiano
- Codigo Moneda: "AUD
- Tasa Cambio USD: "1.438252
--país:
- Nombre: "Austria
- Capital: "Vienna
- Codigo: "AT
- Población: "8527230
- Aréa: "83871
+ Nombre: "Belgica
+"
+ Capital: "Brussels
+ Codigo: "BE
+ Población: "11225469
+ Aréa: "30528
  Moneda: "euro
  Codigo Moneda: "EUR
  Tasa Cambio USD: "0.881813
 -país:
- Nombre: "Azerbaiyán
- Capital: "Baku
- Codigo: "AZ
- Población: "9552500
- Aréa: "86600
- Moneda: "manat azerbaiyano
- Codigo Moneda: "AZN
- Tasa Cambio USD: "1.700102
+ Nombre: "Cabo Verde
+"
+ Capital: "Praia
+ Codigo: "CV
+ Población: "518467
+ Aréa: "4033
+ Moneda: "escudo de Cabo Verde
+ Codigo Moneda: "CVE
+ Tasa Cambio USD: "97.217599
 -país:
- Nombre: "Bahamas
- Capital: "Nassau
- Codigo: "BS
- Población: "319031
- Aréa: "13943
- Moneda: "dólar bahameño
- Codigo Moneda: "BSD
+ Nombre: "Canada
+"
+ Capital: "Ottawa
+ Codigo: "CA
+ Población: "35540419
+ Aréa: "9984670
+ Moneda: "dólar canadiense
+ Codigo Moneda: "CAD
+ Tasa Cambio USD: "1.421278
+-país:
+ Nombre: "Catar
+"
+ Capital: "Doha
+ Codigo: "QA
+ Población: "2269672
+ Aréa: "11586
+ Moneda: "rial catarí
+ Codigo Moneda: "QAR
+ Tasa Cambio USD: "3.64
+-país:
+ Nombre: "Chile
+"
+ Capital: "Santiago
+ Codigo: "CL
+ Población: "17819054
+ Aréa: "756102
+ Moneda: "unidad de fomento chilena
+ Codigo Moneda: "CLF
+ Tasa Cambio USD: "0.024628
+-país:
+ Nombre: "Colombia
+"
+ Capital: "Bogotá
+ Codigo: "CO
+ Población: "47907800
+ Aréa: "1141748
+ Moneda: "peso colombiano
+ Codigo Moneda: "COP
+ Tasa Cambio USD: "3333.963413
+-país:
+ Nombre: "Costa Rica
+"
+ Capital: "San José
+ Codigo: "CR
+ Población: "4713168
+ Aréa: "51100
+ Moneda: "colón costarricense
+ Codigo Moneda: "CRC
+ Tasa Cambio USD: "456.615168
+-país:
+ Nombre: "Croacia
+"
+ Capital: "Zagreb
+ Codigo: "HR
+ Población: "4267558
+ Aréa: "56594
+ Moneda: "kuna croata
+ Codigo Moneda: "HRK
+ Tasa Cambio USD: "6.64296
+-país:
+ Nombre: "Ecuador
+"
+ Capital: "Quito
+ Codigo: "EC
+ Población: "15888900
+ Aréa: "276841
+ Moneda: "dólar estadounidense
+ Codigo Moneda: "USD
  Tasa Cambio USD: "1
 -país:
- Nombre: "Bahrein
- Capital: "Manama
- Codigo: "BH
- Población: "1316500
- Aréa: "765
- Moneda: "dinar bareiní
- Codigo Moneda: "BHD
- Tasa Cambio USD: "0.376
+ Nombre: "El Salvador
+"
+ Capital: "San Salvador
+ Codigo: "SV
+ Población: "6401240
+ Aréa: "21041
+ Moneda: "dólar estadounidense
+ Codigo Moneda: "USD
+ Tasa Cambio USD: "1
 -país:
- Nombre: "Bangladesh
- Capital: "Dhaka
- Codigo: "BD
- Población: "157486000
- Aréa: "147570
- Moneda: "taka bangladesí
- Codigo Moneda: "BDT
- Tasa Cambio USD: "123.023346
+ Nombre: "Espana
+"
+ Capital: "Madrid
+ Codigo: "ES
+ Población: "46507760
+ Aréa: "505992
+ Moneda: "euro
+ Codigo Moneda: "EUR
+ Tasa Cambio USD: "0.881813
+-país:
+ Nombre: "Estados Unidos
+"
+ Capital: "Washington D.C.
+ Codigo: "US
+ Población: "319259000
+ Aréa: "9629091
+ Moneda: "dólar estadounidense
+ Codigo Moneda: "USD
+ Tasa Cambio USD: "1
+-país:
+ Nombre: "Francia
+"
+ Capital: "Paris
+ Codigo: "FR
+ Población: "66078000
+ Aréa: "640679
+ Moneda: "euro
+ Codigo Moneda: "EUR
+ Tasa Cambio USD: "0.881813
+-país:
+ Nombre: "Grecia
+"
+ Capital: "Athens
+ Codigo: "GR
+ Población: "10992589
+ Aréa: "131990
+ Moneda: "euro
+ Codigo Moneda: "EUR
+ Tasa Cambio USD: "0.881813
+-país:
+ Nombre: "India
+"
+ Capital: "New Delhi
+ Codigo: "IN
+ Población: "1263930000
+ Aréa: "3287590
+ Moneda: "rupia india
+ Codigo Moneda: "INR
+ Tasa Cambio USD: "95.997282
+-país:
+ Nombre: "Indonesia
+"
+ Capital: "Jakarta
+ Codigo: "ID
+ Población: "252164800
+ Aréa: "1904569
+ Moneda: "rupia indonesia
+ Codigo Moneda: "IDR
+ Tasa Cambio USD: "17903.534018
+-país:
+ Nombre: "Italia
+"
+ Capital: "Rome
+ Codigo: "IT
+ Población: "60769102
+ Aréa: "301336
+ Moneda: "euro
+ Codigo Moneda: "EUR
+ Tasa Cambio USD: "0.881813
+-país:
+ Nombre: "Japon
+"
+ Capital: "Tokyo
+ Codigo: "JP
+ Población: "127080000
+ Aréa: "377930
+ Moneda: "yen japonés
+ Codigo Moneda: "JPY
+ Tasa Cambio USD: "157.298282
+-país:
+ Nombre: "Letonia
+"
+ Capital: "Riga
+ Codigo: "LV
+ Población: "1991800
+ Aréa: "64559
+ Moneda: "euro
+ Codigo Moneda: "EUR
+ Tasa Cambio USD: "0.881813
+-país:
+ Nombre: "Mexico
+"
+ Capital: "Mexico City
+ Codigo: "MX
+ Población: "119713203
+ Aréa: "1964375
+ Moneda: "peso mexicano
+ Codigo Moneda: "MXN
+ Tasa Cambio USD: "18.077867
+-país:
+ Nombre: "Noruega
+"
+ Capital: "Oslo
+ Codigo: "NO
+ Población: "5156450
+ Aréa: "323802
+ Moneda: "corona noruega
+ Codigo Moneda: "NOK
+ Tasa Cambio USD: "9.609239
+-país:
+ Nombre: "Portugal
+"
+ Capital: "Lisbon
+ Codigo: "PT
+ Población: "10477800
+ Aréa: "92090
+ Moneda: "euro
+ Codigo Moneda: "EUR
+ Tasa Cambio USD: "0.881813
+-país:
+ Nombre: "Tailandia
+"
+ Capital: "Bangkok
+ Codigo: "TH
+ Población: "64871000
+ Aréa: "513120
+ Moneda: "bat tailandés
+ Codigo Moneda: "THB
+ Tasa Cambio USD: "33.580261
+-país:
+ Nombre: "Turquia
+"
+ Capital: "Ankara
+ Codigo: "TR
+ Población: "76667864
+ Aréa: "783562
+ Moneda: "lira turca
+ Codigo Moneda: "TRY
+ Tasa Cambio USD: "49.048442
+-país:
+ Nombre: "Tunez
+"
+ Capital: "Tunis
+ Codigo: "TN
+ Población: "10982754
+ Aréa: "163610
+ Moneda: "dinar tunecino
+ Codigo Moneda: "TND
+ Tasa Cambio USD: "2.974813
+-país:
+ Nombre: "Uganda
+"
+ Capital: "Kampala
+ Codigo: "UG
+ Población: "34856813
+ Aréa: "241550
+ Moneda: "chelín ugandés
+ Codigo Moneda: "UGX
+ Tasa Cambio USD: "3896.968058
+-país:
+ Nombre: "Uruguay
+"
+ Capital: "Montevideo
+ Codigo: "UY
+ Población: "3404189
+ Aréa: "181034
+ Moneda: "peso uruguayo en unidades indexadas
+ Codigo Moneda: "UYI
+ Tasa Cambio USD: "1

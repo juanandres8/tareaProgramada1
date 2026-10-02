@@ -1,196 +1,30 @@
 ﻿Nombre;Capital;Codigo;Poblacion;Area;Moneda;CodigoMoneda;TasaCambioUSD
-Afganistán;Kabul;AF;26023100;652230;afgani afgano;AFN;64.860189
-Albania;Tirana;AL;2895947;28748;lek albanés;ALL;81.155017
-Alemania;Berlin;DE;80783000;357114;euro;EUR;0.881813
-Andorra;Andorra la Vella;AD;85000;468;euro;EUR;0.881813
-Angola;Luanda;AO;24383301;1246700;kuanza angoleño;AOA;924.717414
-Antigua y Barbuda;Saint John's;AG;86295;442;dólar del Caribe Oriental;XCD;2.7
-Arabia Saudí;Riyadh;SA;30770375;2149690;rial saudí;SAR;3.75
-Argelia;Algiers;DZ;38700000;2381741;dinar argelino;DZD;133.846029
 Argentina;Buenos Aires;AR;42669500;2780400;peso argentino;ARS;1517.5209
-Armenia;Yerevan;AM;3009800;29743;dram armenio;AMD;363.102577
-Australia;Canberra;AU;23696900;7692024;dólar australiano;AUD;1.438252
-Austria;Vienna;AT;8527230;83871;euro;EUR;0.881813
-Azerbaiyán;Baku;AZ;9552500;86600;manat azerbaiyano;AZN;1.700102
-Bahamas;Nassau;BS;319031;13943;dólar bahameño;BSD;1
-Bahrein;Manama;BH;1316500;765;dinar bareiní;BHD;0.376
-Bangladesh;Dhaka;BD;157486000;147570;taka bangladesí;BDT;123.023346
-Barbados;Bridgetown;BB;285000;430;dólar barbadense;BBD;2
-Belice;Belmopan;BZ;349728;22966;dólar beliceño;BZD;2
-Benín;Porto-Novo;BJ;9988068;112622;franco CFA de África Occidental;XOF;578.339132
-Bielorrusia;Minsk;BY;9475100;207600;rublo bielorruso;BYN;3.01458
-Bolivia;Sucre;BO;10027254;1098581;boliviano;BOB;12.041089
-Bosnia y Herzegovina;Sarajevo;BA;3791622;51209;marco convertible de Bosnia y Herzegovina;BAM;1.724401
-Botswana;Gaborone;BW;2024904;582000;pula botsuano;BWP;13.995888
 Brasil;Brasília;BR;203586000;8515767;real brasileño;BRL;5.200393
-Brunei;Bandar Seri Begawan;BN;393372;5765;dólar bruneano;BND;1.277688
-Bulgaria;Sofia;BG;7245677;110879;leva búlgara;BGN;1.724401
-Burkina Faso;Ouagadougou;BF;17322796;272967;franco CFA de África Occidental;XOF;578.339132
-Burundi;Bujumbura;BI;9530434;27834;franco burundés;BIF;2998.211409
-Bután;Thimphu;BT;755030;38394;gultrum butanés;BTN;96.0155
 Bélgica;Brussels;BE;11225469;30528;euro;EUR;0.881813
 Cabo Verde;Praia;CV;518467;4033;escudo de Cabo Verde;CVE;97.217599
-Camboya;Phnom Penh;KH;15184116;181035;riel camboyano;KHR;4053.6449
-Camerún;Yaoundé;CM;20386799;475442;franco CFA de África Central;XAF;578.339132
 Canadá;Ottawa;CA;35540419;9984670;dólar canadiense;CAD;1.421278
 Catar;Doha;QA;2269672;11586;rial catarí;QAR;3.64
-Chad;N'Djamena;TD;13211000;1284000;franco CFA de África Central;XAF;578.339132
 Chile;Santiago;CL;17819054;756102;unidad de fomento chilena;CLF;0.024628
-China;Beijing;CN;1367110000;9640011;yuan renminbi;CNY;6.716878
-Chipre;Nicosia;CY;858000;9251;euro;EUR;0.881813
-Ciudad del Vaticano;Ciudad del Vaticano;VA;882;0.49;euro;EUR;0.881813
 Colombia;Bogotá;CO;47907800;1141748;peso colombiano;COP;3333.963413
-Comoras;Moroni;KM;763952;1862;franco comorense;KMF;433.754349
-Congo;Brazzaville;CG;4559000;342000;franco CFA de África Central;XAF;578.339132
-Congo (Rep. Dem.);Kinshasa;CD;69360000;2344858;franco congoleño;CDF;2311.032189
-Corea del Norte;Pyongyang;KP;25027000;120538;won norcoreano;KPW;1355.838011
-Corea del Sur;Seoul;KR;50423955;100210;won surcoreano;KRW;1355.838011
-Costa de Marfil;Yamoussoukro;CI;23821000;322463;franco CFA de África Occidental;XOF;578.339132
 Costa Rica;San José;CR;4713168;51100;colón costarricense;CRC;456.615168
 Croacia;Zagreb;HR;4267558;56594;kuna croata;HRK;6.64296
-Cuba;Havana;CU;11210064;109884;peso cubano convertible;CUC;1
-Dinamarca;Copenhagen;DK;5655750;43094;corona danesa;DKK;6.586139
-Dominica;Roseau;DM;71293;751;dólar del Caribe Oriental;XCD;2.7
 Ecuador;Quito;EC;15888900;276841;dólar estadounidense;USD;1
-Egipto;Cairo;EG;87668100;1002450;libra egipcia;EGP;51.965687
 El Salvador;San Salvador;SV;6401240;21041;dólar estadounidense;USD;1
-Emiratos Árabes Unidos;Abu Dhabi;AE;9446000;83600;dírham de los Emiratos Árabes Unidos;AED;3.6725
-Eritrea;Asmara;ER;6536000;117600;nakfa eritreo;ERN;15
-Eslovenia;Ljubljana;SI;2064966;20273;euro;EUR;0.881813
 España;Madrid;ES;46507760;505992;euro;EUR;0.881813
 Estados Unidos;Washington D.C.;US;319259000;9629091;dólar estadounidense;USD;1
-Estonia;Tallinn;EE;1315819;45227;euro;EUR;0.881813
-Etiopía;Addis Ababa;ET;87952991;1104300;bir etíope;ETB;162.799411
-Filipinas;Manila;PH;100697400;342353;peso filipino;PHP;62.754655
-Finlandia;Helsinki;FI;5470437;338424;euro;EUR;0.881813
-Fiyi;Suva;FJ;859178;18272;dólar fiyiano;FJD;2.245819
 Francia;Paris;FR;66078000;640679;euro;EUR;0.881813
-Gabón;Libreville;GA;1711000;267668;franco CFA de África Central;XAF;578.339132
-Gambia;Banjul;GM;1882450;11295;dalasi gambiano;GMD;74.552189
-Georgia;Tbilisi;GE;4490500;69700;lari georgiano;GEL;2.602382
-Ghana;Accra;GH;27043093;238533;cedi ghanés;GHS;11.706717
 Grecia;Athens;GR;10992589;131990;euro;EUR;0.881813
-Grenada;St. George's;GD;103328;344;dólar del Caribe Oriental;XCD;2.7
-Guatemala;Guatemala City;GT;15806675;108889;quetzal guatemalteco;GTQ;7.639435
-Guinea;Conakry;GN;10628972;245857;franco guineano;GNF;8793.387912
-Guinea Ecuatorial;Malabo;GQ;1430000;28051;franco CFA de África Central;XAF;578.339132
-Guinea-Bisáu;Bissau;GW;1746000;36125;franco CFA de África Occidental;XOF;578.339132
-Guyana;Georgetown;GY;784894;214969;dólar guyanés;GYD;209.233306
-Haiti;Port-au-Prince;HT;10745665;27750;gurde haitiano;HTG;130.868294
-Honduras;Tegucigalpa;HN;8725111;112492;lempira hondureño;HNL;26.851545
-Hungría;Budapest;HU;9879000;93028;forinto húngaro;HUF;323.038522
 India;New Delhi;IN;1263930000;3287590;rupia india;INR;95.997282
 Indonesia;Jakarta;ID;252164800;1904569;rupia indonesia;IDR;17903.534018
-Irak;Baghdad;IQ;36004552;438317;dinar iraquí;IQD;1309.953028
-Iran;Tehran;IR;77966400;1648195;rial iraní;IRR;1522336.036478
-Irlanda;Dublin;IE;6378000;70273;euro;EUR;0.881813
-Islandia;Reykjavik;IS;328170;103000;corona islandesa;ISK;120.552347
-Islas Marshall;Majuro;MH;56086;181;dólar estadounidense;USD;1
-Islas Salomón;Honiara;SB;581344;28896;dólar salomonense;SBD;7.954219
-Israel;Jerusalem;IL;8268400;20770;nuevo séquel israelí;ILS;3.068956
 Italia;Rome;IT;60769102;301336;euro;EUR;0.881813
-Jamaica;Kingston;JM;2717991;10991;dólar jamaicano;JMD;158.455393
 Japón;Tokyo;JP;127080000;377930;yen japonés;JPY;157.298282
-Jordania;Amman;JO;6666960;89342;dinar jordano;JOD;0.709
-Kazajistán;Astana;KZ;17377800;2724900;tengue kazajo;KZT;439.925737
-Kenia;Nairobi;KE;41800000;580367;chelín keniano;KES;129.700459
-Kirguizistán;Bishkek;KG;5776570;199951;som kirguís;KGS;87.474318
-Kiribati;South Tarawa;KI;106461;811;dólar australiano;AUD;1.438252
-Kuwait;Kuwait City;KW;3268431;17818;dinar kuwaití;KWD;0.308528
-Laos;Vientiane;LA;6693300;236800;kip laosiano;LAK;22375.980925
-Lesotho;Maseru;LS;2098000;30355;loti lesotense;LSL;16.415853
 Letonia;Riga;LV;1991800;64559;euro;EUR;0.881813
-Liberia;Monrovia;LR;4397000;111369;dólar liberiano;LRD;171.606231
-Libia;Tripoli;LY;6253000;1759540;dinar libio;LYD;6.394915
-Liechtenstein;Vaduz;LI;37132;160;franco suizo;CHF;0.835134
-Lituania;Vilnius;LT;2927310;65300;euro;EUR;0.881813
-Luxemburgo;Luxembourg;LU;549700;2586;euro;EUR;0.881813
-Líbano;Beirut;LB;4104000;10452;libra libanesa;LBP;89500
-Macedonia;Skopje;MK;2058539;25713;dinar macedonio;MKD;54.280014
-Madagascar;Antananarivo;MG;21842167;587041;ariari malgache;MGA;4398.979265
-Malasia;Kuala Lumpur;MY;30430500;330803;ringit malasio;MYR;4.078529
-Malawi;Lilongwe;MW;15805239;118484;kuacha malauí;MWK;1741.549414
-Maldivas;Malé;MV;341256;300;rufiya maldiva;MVR;15.453218
-Mali;Bamako;ML;15768000;1240192;franco CFA de África Occidental;XOF;578.339132
-Malta;Valletta;MT;416055;316;euro;EUR;0.881813
-Marruecos;Rabat;MA;33465000;446550;dírham marroquí;MAD;9.685424
-Mauricio;Port Louis;MU;1261208;2040;rupia mauriciana;MUR;47.755355
-Mauritania;Nouakchott;MR;3545620;1030700;uguiya mauritano;MRU;39.962625
-Micronesia;Palikir;FM;101351;702;dólar estadounidense;USD;1
-Moldavia;Chișinău;MD;3557600;33846;leu moldavo;MDL;17.729562
-Mongolia;Ulan Bator;MN;2987733;1564110;tugrik mongol;MNT;3579.085462
-Montenegro;Podgorica;ME;623000;13812;euro;EUR;0.881813
-Mozambique;Maputo;MZ;25041922;801590;metical mozambiqueño;MZN;63.864902
-Myanmar;Naypyidaw;MM;54850000;676578;kiat de Myanmar;MMK;2098.724332
 México;Mexico City;MX;119713203;1964375;peso mexicano;MXN;18.077867
-Mónaco;Monaco;MC;36950;2.02;euro;EUR;0.881813
-Namibia;Windhoek;NA;2113077;825615;dólar namibio;NAD;16.415853
-Nauru;Yaren;NR;10084;21;dólar australiano;AUD;1.438252
-Nepal;Kathmandu;NP;27646053;147181;rupia nepalí;NPR;153.6248
-Nicaragua;Managua;NI;6134270;130373;córdoba oro;NIO;36.78822
-Nigeria;Abuja;NG;178517000;923768;naira nigeriano;NGN;1328.645734
 Noruega;Oslo;NO;5156450;323802;corona noruega;NOK;9.609239
-Nueva Zelanda;Wellington;NZ;4547900;270467;dólar neozelandés;NZD;1.774167
-Níger;Niamey;NE;17138707;1267000;franco CFA de África Occidental;XOF;578.339132
-Omán;Muscat;OM;4089076;309500;rial omaní;OMR;0.384497
-Pakistán;Islamabad;PK;188410000;881912;rupia pakistaní;PKR;276.984011
-Palau;Ngerulmud;PW;20901;459;dólar estadounidense;USD;1
-Palestina;Ramallah;PS;5483450;6020;nuevo séquel israelí;ILS;3.068956
-Panamá;Panama City;PA;3713312;75417;balboa panameño;PAB;1
-Papúa Nueva Guinea;Port Moresby;PG;7398500;462840;kina papú;PGK;4.50122
-Paraguay;Asunción;PY;6893727;406752;guaraní paraguayo;PYG;5856.017679
-Países Bajos;Amsterdam;NL;16881000;41850;euro;EUR;0.881813
-Perú;Lima;PE;30814175;1285216;sol peruano;PEN;3.442479
-Polonia;Warsaw;PL;38496000;312679;esloti polaco;PLN;3.84929
 Portugal;Lisbon;PT;10477800;92090;euro;EUR;0.881813
-República Centroafricana;Bangui;CF;4709000;622984;franco CFA de África Central;XAF;578.339132
-República Checa;Prague;CZ;10521600;78865;corona checa;CZK;21.547067
-República de Sudáfrica;Pretoria;ZA;54002000;1221037;rand sudafricano;ZAR;16.415882
-República Dominicana;Santo Domingo;DO;10378267;48671;peso dominicano;DOP;59.495317
-República Eslovaca;Bratislava;SK;5415949;49037;euro;EUR;0.881813
-Ruanda;Kigali;RW;10996891;26338;franco ruandés;RWF;1475.715143
-Rumania;Bucharest;RO;19942642;238391;leu rumano;RON;4.648697
-Rusia;Moscow;RU;146233000;17124442;rublo ruso;RUB;83.691177
-Samoa;Apia;WS;187820;2842;tala samoano;WST;2.738327
-San Cristóbal y Nieves;Basseterre;KN;55000;261;dólar del Caribe Oriental;XCD;2.7
-San Marino;City of San Marino;SM;32743;61;euro;EUR;0.881813
-San Vicente y Granadinas;Kingstown;VC;109000;389;dólar del Caribe Oriental;XCD;2.7
-Santa Lucía;Castries;LC;184000;616;dólar del Caribe Oriental;XCD;2.7
-Santo Tomé y Príncipe;São Tomé;ST;187356;964;dobra santotomense;STN;21.600972
-Senegal;Dakar;SN;13508715;196722;franco CFA de África Occidental;XOF;578.339132
-Serbia;Belgrade;RS;7186862;49037;dinar serbio;RSD;103.530532
-Seychelles;Victoria;SC;89949;452;rupia seychellense;SCR;14.523014
-Sierra Leone;Freetown;SL;6205000;71740;leona sierraleonesa;SLE;24.654462
-Singapur;Singapore;SG;5469700;710;dólar singapurense;SGD;1.277638
-Siria;Damascus;SY;22964324;185180;libra siria;SYP;121.845042
-Somalia;Mogadishu;SO;10806000;637657;chelín somalí;SOS;571.325155
-Sri Lanka;Colombo;LK;20277597;65610;rupia esrilanquesa;LKR;330.375501
-Suazilandia;Lobamba;SZ;1106189;17364;lilangeni esuatiní;SZL;16.415853
-Sudán;Khartoum;SD;37289406;1886068;libra sudanesa;SDG;543.657538
-Sudán del Sur;Juba;SS;11384393;619745;libra sursudanesa;SSP;5936.971385
-Suecia;Stockholm;SE;9737521;450295;corona sueca;SEK;10.003958
-Suiza;Bern;CH;8183800;41284;euro WIR;CHE;1
-Surinam;Paramaribo;SR;534189;163820;dólar surinamés;SRD;37.627245
 Tailandia;Bangkok;TH;64871000;513120;bat tailandés;THB;33.580261
-Tanzania;Dodoma;TZ;47421786;945087;chelín tanzano;TZS;2650.474592
-Tayikistán;Dushanbe;TJ;8161000;143100;somoni tayiko;TJS;9.222952
-Timor Oriental;Dili;TL;1172390;14874;dólar estadounidense;USD;1
-Togo;Lomé;TG;6993000;56785;franco CFA de África Occidental;XOF;578.339132
-Tonga;Nuku'alofa;TO;103252;747;paanga tongano;TOP;2.387285
-Trinidad y Tobago;Port of Spain;TT;1328019;5130;dólar de Trinidad y Tobago;TTD;6.763987
-Turkmenistán;Ashgabat;TM;5838064;488100;manat turcomano;TMT;3.501607
 Turquía;Ankara;TR;76667864;783562;lira turca;TRY;49.048442
-Tuvalu;Funafuti;TV;11323;26;dólar australiano;AUD;1.438252
 Túnez;Tunis;TN;10982754;163610;dinar tunecino;TND;2.974813
-Ucrania;Kiev;UA;42973696;603700;grivna ucraniana;UAH;44.735432
 Uganda;Kampala;UG;34856813;241550;chelín ugandés;UGX;3896.968058
 Uruguay;Montevideo;UY;3404189;181034;peso uruguayo en unidades indexadas;UYI;1
-Uzbekistán;Tashkent;UZ;30492800;447400;sum uzbeko;UZS;11818.674758
-Vanuatu;Port Vila;VU;264652;12189;vatu vanuatense;VUV;119.510736
-Venezuela;Caracas;VE;30206307;916445;bolívar venezolano;VES;860.1753
-Vietnam;Hanoi;VN;89708900;331212;dong vietnamita;VND;25935.273468
-Wales;;GB;0;0;dólar estadounidense;USD;1
-Yemen;Sana'a;YE;25956000;527968;rial yemení;YER;236.534961
-Yibuti;Djibouti;DJ;886000;23200;franco yibutiano;DJF;177.721
-Zambia;Lusaka;ZM;15023315;752612;kuacha zambiano;ZMW;19.626234
-Zimbabue;Harare;ZW;13061239;390757;oro de Zimbabue;ZWG;26.7965
