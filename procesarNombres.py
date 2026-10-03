@@ -10,7 +10,7 @@ def obtenerTexto(linea):
     '''
     texto=""
     encontrado=False
-    for caracter in linea:
+    for caracter in linea: 
         if caracter=="\"":
             encontrado=not encontrado
         elif encontrado and caracter!="\n":
@@ -121,9 +121,9 @@ def actualizarNombres(data):
         archivo=open("paises.toon","w",encoding="utf-8-sig")
         for linea in data:
             if "Nombre:"in linea:
-                nombre=obtenerTexto(linea)
-                nombre=normalizarNombre(nombre)
-                archivo.write(' Nombre: "'+nombre+'"\n')
+                texto=obtenerTexto(linea)
+                nombreNormalizado=normalizarNombre(texto)
+                archivo.write(' Nombre: "'+nombreNormalizado+'"\n')
             else:
                 archivo.write(linea)
         archivo.close()
@@ -176,7 +176,7 @@ def nombreMasCorto(data):
             menor=nombre
     return menor
 #Definición función Cantidad de países que contienen una cierta letra
-def cantidadPaises(data,letra):
+def cantidadLetraEnPaises(data,letra):
     '''
     Funcionalidad:Permite obtener la cantidad de países que contienen una letra determinada.
     Entradas:
@@ -205,7 +205,7 @@ paisCorto=nombreMasCorto(data)
 print("-País con nombre más corto: "+paisCorto+" - "+str(len(paisCorto)))
 print()
 letra=input("Ingrese una letra: ")
-cantidad=cantidadPaises(data,letra)
+cantidad=cantidadLetraEnPaises(data,letra)
 print("-Cantidad de países que contienen la letra "+letra+": "+str(cantidad))
 
 

@@ -1,16 +1,12 @@
-#Importación de librerias
-import pickle
-import csv
-import json
-
+#Opción 1
 #Definición de función para cargar los datos
 def leer(nombreArchivoLeer):
     '''
-    Funcionalidad: Permite abrir el archivo csv y leer los datos de los países almacenados. 
+    Funcionalidad: Permite abrir el archivo  y leer el contenido.
     Entradas:
-    -nombreArchivoLeer: Nombre del archivo csv donde están almacenados los datos de los países.
+    -nombreArchivoLeer: Nombre del archivo donde están almacenados los datos.
     Salidas:
-    -data:Son las líneas leídas del archivo csv.
+    -data:Son las líneas leídas del archivo.
     '''
     try:
         archivo=open(nombreArchivoLeer,"r", encoding="utf-8-sig")
@@ -30,7 +26,7 @@ def escribirToon(data):
     '''
     try:
         archivo=open("paises.toon","w",encoding="utf-8-sig")
-        for posicionPais in range(1,len(data)):
+        for posicionPais in range(1,len(data)):#Se inicia en 1 para omitir el encabezado
             campo=data[posicionPais].strip().split(";")
             archivo.write("-país:\n")
             archivo.write(' Nombre: \"'+campo[0]+'"\n')
@@ -43,7 +39,7 @@ def escribirToon(data):
             archivo.write(' Tasa Cambio USD: \"'+campo[7]+'"\n')
         archivo.close()
     except:
-        print("Error al leer el archivo.Toon: ")
+        print("Error al interactuar con el archivo.Toon: ")
 #Definición de función para cantidad de países cargados
 def cantidadPaises(data):
     '''
@@ -51,12 +47,10 @@ def cantidadPaises(data):
     Entradas:
     -data:Líneas del archivo.csv que contiene los datos de los países.
     Salidas:
-    -Retorna un texto con la cantidad de países cargados.
+    -Cantidad:Retorna la cantidad de países cargados.
     '''
-    cantidad=0
-    for posicionPais in range(1,len(data)):
-        cantidad+=1
-    return "-Cantidad de países cargados: "+str(cantidad)
+    cantidad=len(data)-1
+    return cantidad
 #Definición de función para países con mayor población
 def mayorPoblacion(data):
     '''
@@ -66,7 +60,7 @@ def mayorPoblacion(data):
     Salidas:
     -Muestra en la consola los nombres de los países y la población de los 5 países con mayor población.
     '''
-    paises=data[:]
+    paises=data
     for posicionPais in range(1,len(paises)):
         for posicionComparar in range(posicionPais+1,len(paises)):
             pais=paises[posicionPais].strip().split(";")
@@ -130,10 +124,10 @@ def cantidadMonedas(data):
     Entradas:
     -data:Líneas del archivo.csv que contiene los datos de los países.
     Salidas:
-    -Retorna un texto con la cantidad de monedas descargadas
+    -len(monedas)=Retorna la cantidad de monedas descargadas
     '''
     monedas=obtenerMonedas(data)
-    return "-Cantidad de monedas descargadas: "+str(len(monedas))
+    return len(monedas)
 #Definición función monedas con mayor valor
 def monedasMayorValor(data):
     '''
@@ -143,8 +137,7 @@ def monedasMayorValor(data):
     Salidas:
     -Muestra en la consola el nombre y la tasa de cambio de las 5 monedas con mayor valor frente al USD.
     '''
-    monedas=obtenerMonedas(data)
-    monedasOrdenadas=monedas[:]
+    monedasOrdenadas=obtenerMonedas(data)
     for posicionMoneda in range(len(monedasOrdenadas)):
         for posicionComparar in range(posicionMoneda+1,len(monedasOrdenadas)):
             if monedasOrdenadas[posicionMoneda][2]>monedasOrdenadas[posicionComparar][2]:
@@ -164,8 +157,7 @@ def monedasMenorValor(data):
     Salidas:
     -Muestra en la consola el nombre y la tasa de cambio de las 5 monedas con menor valor frente al USD.
     '''
-    monedas=obtenerMonedas(data)
-    monedasOrdenadas=monedas[:]
+    monedasOrdenadas=obtenerMonedas(data)
     for posicionMoneda in range(len(monedasOrdenadas)):
         for posicionComparar in range(posicionMoneda+1,len(monedasOrdenadas)):
             if monedasOrdenadas[posicionMoneda][2]<monedasOrdenadas[posicionComparar][2]:
@@ -180,13 +172,13 @@ def monedasMenorValor(data):
 #Programa Principal(Prueba)
 data=leer("nombreArchivoLeer.csv")
 escribirToon(data)
-print(cantidadPaises(data))
+print("-Cantidad de países cargados: "+str(cantidadPaises(data)))
 print()
 mayorPoblacion(data)
 print()
 menorArea(data)
 print()
-print(cantidadMonedas(data))
+print("-Cantidad de monedas descargadas: "+str(cantidadMonedas(data)))
 print()
 monedasMayorValor(data)
 print()
