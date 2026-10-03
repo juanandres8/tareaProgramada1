@@ -5,6 +5,13 @@ import json
 
 #Definición de función para cargar los datos
 def leer(nombreArchivoLeer):
+    '''
+    Funcionalidad: Permite abrir el archivo csv y leer los datos de los países almacenados. 
+    Entradas:
+    -nombreArchivoLeer: Nombre del archivo csv donde están almacenados los datos de los países.
+    Salidas:
+    -data:Son las líneas leídas del archivo csv.
+    '''
     try:
         archivo=open(nombreArchivoLeer,"r", encoding="utf-8-sig")
         data=archivo.readlines()
@@ -14,92 +21,128 @@ def leer(nombreArchivoLeer):
         print("Error al leer el archivo: ",nombreArchivoLeer)
 #Definición de función para crear toon
 def escribirToon(data):
+    '''
+    Funcionalidad:Permite crear el archivo.toon y almacenar los datos de los países obtenidos del csv.
+    Entradas:
+    -data:Líneas del archivo.csv que contiene los datos de los países.
+    Salidas:
+    -No retorna nada, pues solo escribe los datos en el archivo.toon.
+    '''
     try:
         archivo=open("paises.toon","w",encoding="utf-8-sig")
-        for i in range(1,len(data)):
-            campo=data[i].strip().split(";")
+        for posicionPais in range(1,len(data)):
+            campo=data[posicionPais].strip().split(";")
             archivo.write("-país:\n")
-            archivo.write(" Nombre: \""+campo[0]+"\n")
-            archivo.write(" Capital: \""+campo[1]+"\n")
-            archivo.write(" Codigo: \""+campo[2]+"\n")
-            archivo.write(" Población: \""+campo[3]+"\n")
-            archivo.write(" Aréa: \""+campo[4]+"\n")
-            archivo.write(" Moneda: \""+campo[5]+"\n")
-            archivo.write(" Codigo Moneda: \""+campo[6]+"\n")
-            archivo.write(" Tasa Cambio USD: \""+campo[7]+"\n")
+            archivo.write(' Nombre: \"'+campo[0]+'"\n')
+            archivo.write(' Capital: \"'+campo[1]+'"\n')
+            archivo.write(' Codigo: \"'+campo[2]+'"\n')
+            archivo.write(' Población: \"'+campo[3]+'"\n')
+            archivo.write(' Aréa: \"'+campo[4]+'"\n')
+            archivo.write(' Moneda: \"'+campo[5]+'"\n')
+            archivo.write(' Codigo Moneda: \"'+campo[6]+'"\n')
+            archivo.write(' Tasa Cambio USD: \"'+campo[7]+'"\n')
         archivo.close()
     except:
         print("Error al leer el archivo.Toon: ")
-#PP
-data=leer("nombreArchivoLeer.csv")
-escribirToon(data)
 #Definición de función para cantidad de países cargados
 def cantidadPaises(data):
+    '''
+    Funcionalidad:Permite contar la cantidad de países que existen en el archivo.csv.
+    Entradas:
+    -data:Líneas del archivo.csv que contiene los datos de los países.
+    Salidas:
+    -Retorna un texto con la cantidad de países cargados.
+    '''
     cantidad=0
     for posicionPais in range(1,len(data)):
         cantidad+=1
     return "-Cantidad de países cargados: "+str(cantidad)
-#PP
-print(cantidadPaises(data))
-print()
 #Definición de función para países con mayor población
 def mayorPoblacion(data):
+    '''
+    Funcionalidad:Permite ordenar los países de mayor a menor según su población, teniendo en cuenta solo los 5 con mayor población.
+    Entradas:
+    -data:Líneas del archivo.csv que contiene los datos de los países.
+    Salidas:
+    -Muestra en la consola los nombres de los países y la población de los 5 países con mayor población.
+    '''
     paises=data[:]
     for posicionPais in range(1,len(paises)):
         for posicionComparar in range(posicionPais+1,len(paises)):
-            datoPais=paises[posicionPais].strip().split(";")
-            datoComparar=paises[posicionComparar].strip().split(";")
-            if int(datoPais[3])<int(datoComparar[3]):
+            pais=paises[posicionPais].strip().split(";")
+            comparar=paises[posicionComparar].strip().split(";")
+            poblacionPais=int(pais[3])
+            poblacionComparar=int(comparar[3])
+            if poblacionPais<poblacionComparar:
                 aux=paises[posicionPais]
                 paises[posicionPais]=paises[posicionComparar]
                 paises[posicionComparar]=aux
     print("-Los 5 países con mayor población son: ")
     for posicion in range(1,6):
-        datoPais=paises[posicion].strip().split(";")
-        print(str(posicion)+"."+datoPais[0],"-",datoPais[3])
-#PP
-mayorPoblacion(data)
-print()
+        pais=paises[posicion].strip().split(";")
+        print(str(posicion)+"."+pais[0],"-",pais[3])
 #Definición de función para países con menor área
 def menorArea(data):
+    '''
+    Funcionalidad:Permite ordenar los países de menor a mayor según su área, teniendo en cuenta solo los 5 con menor área.
+    Entradas:
+    -data:Líneas del archivo.csv que contiene los datos de los países.
+    Salidas:
+    -Muestra en la consola los nombres de los países y el área de los 5 países con menor área.
+    '''
     paises=data[:]
     for posicionPais in range(1,len(paises)):
         for posicionComparar in range(posicionPais+1,len(paises)):
-            datoPais=paises[posicionPais].strip().split(";")
-            datoComparar=paises[posicionComparar].strip().split(";")
-            if float(datoPais[4])>float(datoComparar[4]):
+            pais=paises[posicionPais].strip().split(";")
+            comparar=paises[posicionComparar].strip().split(";")
+            areaActual=float(pais[4])
+            areaComparar=float(comparar[4])
+            if areaActual>areaComparar:
                 aux=paises[posicionPais]
                 paises[posicionPais]=paises[posicionComparar]
                 paises[posicionComparar]=aux
     print("-Los 5 países con menor área son: ")
     for posicion in range(1,6):
-        datoPais=paises[posicion].strip().split(";")
-        print(str(posicion)+"."+datoPais[0],"-",datoPais[4])
-menorArea(data)
-print()
+        pais=paises[posicion].strip().split(";")
+        print(str(posicion)+"."+pais[0],"-",pais[4])
 #Definición función fecha de la tasa de cambio
 
 #Definición función obtener monedas sin repetir
 def obtenerMonedas(data):
+    '''
+    Funcionalidad:Permite obtener las monedas de los países pero sin repetir.
+    Entradas:
+    -data:Líneas del archivo.csv que contiene los datos de los países.
+    Salidas:
+    -monedas:Retorna una lista con el nombre de la moneda,su código y su tasa de cambio,sin monedas repetidas.
+    '''
     monedas=[]
     for posicionPais in range(1,len(data)):
-        datoPais=data[posicionPais].strip().split(";")
-        moneda=[datoPais[5],datoPais[6],float(datoPais[7])]
+        pais=data[posicionPais].strip().split(";")
+        moneda=[pais[5],pais[6],float(pais[7])]
         if moneda not in monedas:
             monedas.append(moneda)
     return monedas
 #Definición función contar monedad
 def cantidadMonedas(data):
+    '''
+    Funcionalidad:Permite obtener la cantidad de monedas diferentes de los países.
+    Entradas:
+    -data:Líneas del archivo.csv que contiene los datos de los países.
+    Salidas:
+    -Retorna un texto con la cantidad de monedas descargadas
+    '''
     monedas=obtenerMonedas(data)
-    cantidad=0
-    for moneda in monedas:
-        cantidad+=1
-    return "-Cantidad de monedas descargadas: "+str(cantidad)
-#PP
-print(cantidadMonedas(data))
-print()
+    return "-Cantidad de monedas descargadas: "+str(len(monedas))
 #Definición función monedas con mayor valor
 def monedasMayorValor(data):
+    '''
+    Funcionalidad:Permite ordenar las monedas de mayor a menor valor frente al USD,teniendo en cuenta solo los 5 mayores.
+    Entradas:
+    -data:Líneas del archivo.csv que contiene los datos de los países.
+    Salidas:
+    -Muestra en la consola el nombre y la tasa de cambio de las 5 monedas con mayor valor frente al USD.
+    '''
     monedas=obtenerMonedas(data)
     monedasOrdenadas=monedas[:]
     for posicionMoneda in range(len(monedasOrdenadas)):
@@ -110,12 +153,17 @@ def monedasMayorValor(data):
                 monedasOrdenadas[posicionComparar]=aux
     print("-Los 5 monedas con mayor valor frente al USD son: ")
     for posicion in range(1,6):
-        print(str(posicion)+"."+monedasOrdenadas[posicion-1][0],"-",monedasOrdenadas[posicion-1][2])
-#PP
-monedasMayorValor(data)
-print()
+        moneda=monedasOrdenadas[posicion-1]
+        print(str(posicion)+"."+moneda[0],"-",moneda[2])
 #Definición función monedas con menor valor
 def monedasMenorValor(data):
+    '''
+    Funcionalidad:Permite ordenar las monedas de menor a mayor valor frente al USD,teniendo en cuenta solo los 5 menores.
+    Entradas:
+    -data:Líneas del archivo.csv que contiene los datos de los países.
+    Salidas:
+    -Muestra en la consola el nombre y la tasa de cambio de las 5 monedas con menor valor frente al USD.
+    '''
     monedas=obtenerMonedas(data)
     monedasOrdenadas=monedas[:]
     for posicionMoneda in range(len(monedasOrdenadas)):
@@ -126,7 +174,22 @@ def monedasMenorValor(data):
                 monedasOrdenadas[posicionComparar]=aux
     print("-Los 5 monedas con menor valor frente al USD son: ")
     for posicion in range(1,6):
-        print(str(posicion)+"."+monedasOrdenadas[posicion+1][0],"-",monedasOrdenadas[posicion+1][2])
+        moneda=monedasOrdenadas[posicion-1]
+        print(str(posicion)+"."+moneda[0],"-",moneda[2])
+
+#Programa Principal(Prueba)
+data=leer("nombreArchivoLeer.csv")
+escribirToon(data)
+print(cantidadPaises(data))
+print()
+mayorPoblacion(data)
+print()
+menorArea(data)
+print()
+print(cantidadMonedas(data))
+print()
+monedasMayorValor(data)
+print()
 monedasMenorValor(data)
 
             

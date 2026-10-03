@@ -1,24 +1,44 @@
 from cargaDatos import leer 
-
+#Definición función aux
+def obtenerTexto(linea):
+    '''
+    Funcionalidad:Permite obtener el texto que se encuentra entre comillas de una linea.
+    Entradas:
+    -linea:Es cada línea del archivo.toon de la cual se quiere obtener el texto.
+    Salidas:
+    -texto:Retorna el texto encontrado entre comillas.
+    '''
+    texto=""
+    encontrado=False
+    for caracter in linea:
+        if caracter=="\"":
+            encontrado=not encontrado
+        elif encontrado and caracter!="\n":
+            texto+=caracter
+    return texto
 #Definición función nombres países
 def obtenerNombres(data):
+    '''
+    Funcionalidad:Permite obtener el nombre de cada país en una lista.
+    Entradas:
+    -data:Líneas del archivo.toon que contiene los datos de los países.
+    Salidas:
+    -nombres:Retorna una lista con todos los nombres de los países.
+    '''
     nombres=[]
     for linea in data:
         if "Nombre:"in linea:
-            nombre=""
-            encontrado=False
-            for caracter in linea:
-                if caracter=="\"":
-                    if encontrado==False:
-                        encontrado=True
-                    else:
-                        encontrado=False
-                elif encontrado==True and caracter!="\n":
-                    nombre+=caracter
-            nombres.append(nombre)
+            nombres.append(obtenerTexto(linea))
     return nombres
 #Definición función normalizar nombres países
 def normalizarNombre(nombre):
+    '''
+    Funcionalidad:Permite normalizar el nombre de un país, eliminando espacios innecesarios,contenido entre paréntesis y caracteres especiales,para luego capitalizar cada palabra.
+    Entradas:
+    -nombre:Nombre del país que se quiere normalizar.
+    Salidas:
+    -resul:Retorna el nombre del país normalizado.
+    '''
     nombre=nombre.upper() #Mayúscula
     #Eliminar espacios
     inicio=0
@@ -76,6 +96,13 @@ def normalizarNombre(nombre):
     return resul
 #Definción función normalizar todos los nombres
 def normalizarNombres(data):
+    '''
+    Funcionalidad:Permite obtener una lista con los nombres de los países ya normalizados.
+    Entradas:
+    -data:Líneas del archivo.toon que contiene los datos de los países.
+    Salidas:
+    -nombresNormalizados:Retorna una lista con los nombres de los países ya normalizados.
+    '''
     nombres=obtenerNombres(data)
     nombresNormalizados=[]
     for nombre in nombres:
@@ -83,20 +110,18 @@ def normalizarNombres(data):
     return nombresNormalizados
 #Definición función para actualizar datos en el .toon
 def actualizarNombres(data):
+    '''
+    Funcionalidad:Permite actualizar los nombres de los países en el .toon por sus nombres ya normalizados.
+    Entradas:
+    -data:Líneas del archivo.toon que contiene los datos de los países.
+    Salidas:
+    -No retorna nada, solamente actualiza los  nombres en el .toon
+    '''
     try:
         archivo=open("paises.toon","w",encoding="utf-8-sig")
         for linea in data:
             if "Nombre:"in linea:
-                nombre=""
-                encontrado=False
-                for caracter in linea:
-                    if caracter=="\"":
-                        if encontrado==False:
-                            encontrado=True
-                        else:
-                            encontrado=False
-                    elif encontrado==True:
-                        nombre+=caracter
+                nombre=obtenerTexto(linea)
                 nombre=normalizarNombre(nombre)
                 archivo.write(' Nombre: "'+nombre+'"\n')
             else:
@@ -107,50 +132,81 @@ def actualizarNombres(data):
 
 #Definición función longitud promedio de los nombres
 def longitudPromedio(data):
+    '''
+    Funcionalidad:Permite obtener la longitud promedio de todos los nombres de los países.
+    Entradas:
+    -data:Líneas del archivo.toon que contiene los datos de los países.
+    Salidas:
+    -Promedio:Retorna la longitud promedio de los nombres de los países.
+    '''
     nombres=normalizarNombres(data)
     suma=0
-    cantidad=0
     for nombre in nombres:
         suma+=len(nombre)
-        cantidad+=1
-    promedio=suma//cantidad
-    return"-Longitud promedio de nombres: "+str(promedio)
+    promedio=suma//len(nombres)
+    return promedio
 #Definición función país con nombre más largo
 def nombreMasLargo(data):
+    '''
+    Funcionalidad:Permite obtener el país con el nombre más largo.
+    Entradas:
+    -data:Líneas del archivo.toon que contiene los datos de los países.
+    Salidas:
+    -mayor:Retorna el nombre del país con mayor longitud.
+    '''
     nombres=normalizarNombres(data)
     mayor=nombres[0]
     for nombre in nombres:
         if len(nombre)>len(mayor):
             mayor=nombre
-    return "-País con nombre más largo: "+mayor+" - "+str(len(mayor))
+    return mayor
 #Definición función país con nombre más corto
 def nombreMasCorto(data):
+    '''
+    Funcionalidad:Permite obtener el país con el nombre más corto.
+    Entradas:
+    -data:Líneas del archivo.toon que contiene los datos de los países.
+    Salidas:
+    -menor:Retorna el nombre del país con menor longitud.
+    '''
     nombres=normalizarNombres(data)
     menor=nombres[0]
     for nombre in nombres:
         if len(nombre)<len(menor):
             menor=nombre
-    return "-País con nombre más corto: "+menor+" - "+str(len(menor))
+    return menor
 #Definición función Cantidad de países que contienen una cierta letra
 def cantidadPaises(data,letra):
+    '''
+    Funcionalidad:Permite obtener la cantidad de países que contienen una letra determinada.
+    Entradas:
+    -data:Líneas del archivo.toon que contiene los datos de los países.
+    -letra:Letra que se quiere buscar en los nombres de los países.
+    Salidas:
+    -cantidad:Retorna la cantidad de países que tienen la letra indicada.
+    '''
     nombres=normalizarNombres(data)
     cantidad=0
     for nombre in nombres:
-        encontrado=False
         for caracter in nombre:
             if caracter.lower()==letra.lower():
-                encontrado=True
-        if encontrado==True:
-            cantidad+=1
-    return "-Cantidad de países que contienen la letra "+letra+": "+str(cantidad)
+                cantidad+=1
+                break
+    return cantidad
 #PP
 data=leer("paises.toon")
 actualizarNombres(data)
-print(longitudPromedio(data))
-print(nombreMasLargo(data))
-print(nombreMasCorto(data))
+print("-Longitud promedio de nombres: ",longitudPromedio(data))
+print()
+paisLargo=nombreMasLargo(data)
+print("-País con nombre más largo: "+paisLargo+" - "+str(len(paisLargo)))
+print()
+paisCorto=nombreMasCorto(data)
+print("-País con nombre más corto: "+paisCorto+" - "+str(len(paisCorto)))
+print()
 letra=input("Ingrese una letra: ")
-print(cantidadPaises(data,letra))
+cantidad=cantidadPaises(data,letra)
+print("-Cantidad de países que contienen la letra "+letra+": "+str(cantidad))
 
 
 
