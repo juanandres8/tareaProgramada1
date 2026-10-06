@@ -87,3 +87,41 @@ def normalizarMoneda(nombre):
             else:
                 resul+=caracter.lower()
     return resul
+#Definción de función crear formato para moneda
+def formatoMonedas(data):
+    '''
+    Funcionalidad:Permite crear el formato "código-nombre" para cada moneda.
+    Entradas:
+    -data:Son las líneas leídas del archivo.toon.
+    Salidas:
+    -monedasFormato:Retorna una lista con las monedas en formato "código-nombre".
+    '''
+    monedas=obtenerMonedas(data)
+    monedasFormato=[]
+    for moneda in monedas:
+        codigo=moneda[0]
+        nombre=normalizarMoneda(moneda[1])
+        formato=codigo+"-"+nombre
+        monedasFormato.append(formato)
+    return monedasFormato
+#Definición de función contar monedas
+def contarMonedasLetras(data,n):
+    '''
+    Funcionalidad:Permite contar cuántas monedas tienen exactamente n letras.
+    Entradas:
+    -data:Líneas del archivo.toon que contiene los datos.
+    -n:Cantidad de letras que se quiere buscar.
+    Salidas:
+    -cantidad:Retorna la cantidad de monedas que tienen exactamente n letras.
+    '''
+    monedas=obtenerMonedas(data)
+    cantidad=0
+    for moneda in monedas:
+        nombre=normalizarMoneda(moneda[1])
+        cantidadLetras=0
+        for caracter in nombre:
+            if caracter!=" ":
+                cantidadLetras+=1
+        if cantidadLetras==n:
+                cantidad+=1
+    return cantidad
