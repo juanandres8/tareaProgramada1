@@ -99,6 +99,41 @@ def menu():
                 mayorDensidad(paises)
                 print()# Muestra los 10 países con menor densidad poblacional
                 menorDensidad(paises)
+         elif opcion==4:
+            # Leer los datos actualizados del archivo .toon
+            dataToon = leer("paises.toon")
+            # Obtener las monedas con su código y nombre
+            monedas = obtenerMonedas(dataToon)
+            # Mostrar las monedas normalizadas
+            print("Monedas:")
+            print(formatoMonedas(dataToon))
+            # Contar monedas según la cantidad de letras
+            n = int(input("Ingrese la cantidad de letras: "))
+            cantidad = contarMonedasLetras(dataToon, n)
+            print("Cantidad de monedas con", n, "letras:", cantidad)
+            # Verificar si las monedas contienen tasas de cambio
+            if len(monedas) > 0 and len(monedas[0]) >= 3:
+                # Calcular la tasa de cambio promedio
+                promedio = calcularPromedioTasas(monedas)
+                print("Tasa de cambio promedio:", promedio)
+                # Encontrar la moneda más fuerte y la más débil
+                fuerte, debil = encontrarMonedaFuerteDebil(monedas)
+                print("Moneda más fuerte:", fuerte)
+                print("Moneda más débil:", debil)
+                # Contar las monedas según su tasa
+                mayores, iguales, menores = contarMonedasPorTasa(monedas)
+                print("Tasas mayores a 1 USD:", mayores)
+                print("Tasas iguales a 1 USD:", iguales)
+                print("Tasas menores a 1 USD:", menores)
+                # Ordenar las monedas por tasa
+                ascendente, descendente = ordenarMonedasPorTasa(monedas)
+                print("Orden ascendente:", ascendente)
+                print("Orden descendente:", descendente)
+            else:
+                print("No se pueden calcular las tasas.")
+                print("Las monedas solo contienen código y nombre.")
+                print("Falta obtener la tasa de cambio de cada moneda.")
+
         elif opcion ==9:
             # Cambia el valor de salir a True para terminar el ciclo while
                 salir=True
