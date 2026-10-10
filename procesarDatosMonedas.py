@@ -11,18 +11,24 @@ def obtenerMonedas(data):
     Salidas:
     -monedas:Retorna una lista con el código y nombre de cada moneda.
     '''
-    monedas=[]
-    nombreCompleto=""
+    monedas = []
+    nombreCompleto = ""
+    codigo = ""
+    tasa = ""
     for linea in data:
-        if "Moneda:"in linea and "Codigo Moneda:" not in linea
-        :
-            nombreCompleto=obtenerTexto(linea)
-        elif "Codigo Moneda:"in linea:
-            codigo=obtenerTexto(linea)
-            moneda=[codigo,nombreCompleto]
+        if "Moneda:" in linea and "Codigo Moneda:" not in linea:
+            nombreCompleto = obtenerTexto(linea)
+        elif "Codigo Moneda:" in linea:
+            codigo = obtenerTexto(linea)
+        elif "Tasa Cambio USD:" in linea:
+            tasa = obtenerTexto(linea)
+            # Crear la moneda con sus tres datos
+            moneda = [codigo, nombreCompleto, float(tasa)]
+            # Evitar monedas repetidas
             if moneda not in monedas:
                 monedas.append(moneda)
     return monedas
+
 #Definción función normalizar nombre de moneda
 def normalizarMoneda(nombre):
     '''
@@ -125,3 +131,114 @@ def contarMonedasLetras(data,n):
         if cantidadLetras==n:
                 cantidad+=1
     return cantidad
+
+# Definición de función calcular promedio de tasas
+def calcularPromedioTasas(monedas):
+    '''
+    Funcionalidad:
+    Permite calcular la tasa de cambio promedio de las monedas.
+    Entradas:
+    - monedas: Lista que contiene el código, nombre y tasa de cada moneda.
+    Salidas:
+    - promedio: Retorna el promedio de las tasas de cambio.
+    '''
+    suma = 0
+    cantidad = 0
+    # Recorrer todas las monedas
+    for moneda in monedas:
+        tasa = float(moneda[2])
+        suma += tasa
+        cantidad += 1
+    # Verificar que existan monedas
+    if cantidad == 0:
+        return 0
+    # Calcular el promedio
+    promedio = suma / cantidad
+    return promedio
+
+# Definición de función encontrar moneda fuerte y débil
+def encontrarMonedaFuerteDebil(monedas):
+    '''
+    Funcionalidad:
+    Permite encontrar la moneda con la tasa más alta
+    y la moneda con la tasa más baja.
+    Entradas:
+    - monedas: Lista que contiene los datos de las monedas.
+    Salidas:
+    - fuerte: Moneda con la tasa más alta.
+    - debil: Moneda con la tasa más baja.
+    '''
+    # Verificar que existan monedas
+    if len(monedas) == 0:
+        return None, None
+    # Inicializar con la primera moneda
+    fuerte = monedas[0]
+    debil = monedas[0]
+    # Comparar las tasas de todas las monedas
+    for moneda in monedas:
+        tasa = float(moneda[2])
+        # Buscar la tasa más alta
+        if tasa > float(fuerte[2]):
+            fuerte = moneda
+        # Buscar la tasa más baja
+        if tasa < float(debil[2]):
+            debil = moneda
+    return fuerte, debil
+
+# Definición de función contar monedas por tasa
+def contarMonedasPorTasa(monedas):
+    '''
+    Funcionalidad:
+    Permite contar cuántas monedas tienen una tasa
+    mayor, igual o menor que 1 USD.
+    Entradas:
+    - monedas: Lista que contiene los datos de las monedas.
+    Salidas:
+    - mayores: Cantidad de monedas con tasa mayor que 1.
+    - iguales: Cantidad de monedas con tasa igual a 1.
+    - menores: Cantidad de monedas con tasa menor que 1.
+    '''
+    # Inicializar los contadores
+    mayores = 0
+    iguales = 0
+    menores = 0
+    # Recorrer las monedas
+    for moneda in monedas:
+        tasa = float(moneda[2])
+        # Clasificar según la tasa de cambio
+        if tasa > 1:
+            mayores += 1
+        elif tasa == 1:
+            iguales += 1
+        else:
+            menores += 1
+    return mayores, iguales, menores
+
+# Definición de función ordenar monedas por tasa
+def ordenarMonedasPorTasa(monedas):
+    '''
+    Funcionalidad:
+    Permite ordenar las monedas por su tasa de cambio,
+    de forma ascendente y descendente.
+    Entradas:
+    - monedas: Lista que contiene los datos de las monedas.
+    Salidas:
+    - ascendente: Lista ordenada de menor a mayor tasa.
+    - descendente: Lista ordenada de mayor a menor tasa.
+    '''
+    # Crear una copia para no modificar la lista original
+    ascendente = monedas.copy()
+    # Ordenar las monedas de menor a mayor
+    for i in range(len(ascendente)):
+        for j in range(i + 1, len(ascendente)):
+            # Comparar las tasas de cambio
+            if float(ascendente[i][2]) > float(ascendente[j][2]):
+                # Intercambiar las posiciones
+                auxiliar = ascendente[i]
+                ascendente[i] = ascendente[j]
+                ascendente[j] = auxiliar
+    # Copiar la lista ordenada
+    descendente = ascendente.copy()
+    # Invertir el orden para obtener el descendente
+    descendente.reverse()
+    return ascendente, descendente
