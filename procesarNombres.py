@@ -193,20 +193,7 @@ def cantidadLetraEnPaises(data,letra):
                 cantidad+=1
                 break
     return cantidad
-#PP
-data=leer("paises.toon")
-actualizarNombres(data)
-print("-Longitud promedio de nombres: ",longitudPromedio(data))
-print()
-paisLargo=nombreMasLargo(data)
-print("-País con nombre más largo: "+paisLargo+" - "+str(len(paisLargo)))
-print()
-paisCorto=nombreMasCorto(data)
-print("-País con nombre más corto: "+paisCorto+" - "+str(len(paisCorto)))
-print()
-letra=input("Ingrese una letra: ")
-cantidad=cantidadLetraEnPaises(data,letra)
-print("-Cantidad de países que contienen la letra "+letra+": "+str(cantidad))
+
 
 
 

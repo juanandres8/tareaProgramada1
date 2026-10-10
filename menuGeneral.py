@@ -6,6 +6,7 @@
 from cargaDatos import *
 from procesarNombres import *
 from procesarPoblacion import *
+from procesarDatosMonedas import *
 #-------------------------------------------
 # Carga inicial de los datos
 #-------------------------------------------
@@ -83,7 +84,7 @@ def menu():
                 # Cuenta cuántos países contienen esa letra
                 cantidad = cantidadLetraEnPaises(dataToon,letra)
                 print("-Cantidad de países que contienen la letra "+ letra+ ": "+ str(cantidad))
-        elif opcion== 3:
+        elif opcion==3:
                 # Calcula la población total
                 print("-Población total del mundo:", poblacionTotal(paises))
                 print() # Calcula la población promedio
@@ -99,7 +100,7 @@ def menu():
                 mayorDensidad(paises)
                 print()# Muestra los 10 países con menor densidad poblacional
                 menorDensidad(paises)
-         elif opcion==4:
+         elif opcion== 4:
             # Leer los datos actualizados del archivo .toon
             dataToon = leer("paises.toon")
             # Obtener las monedas con su código y nombre

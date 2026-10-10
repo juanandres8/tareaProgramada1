@@ -169,21 +169,6 @@ def monedasMenorValor(data):
         moneda=monedasOrdenadas[posicion-1]
         print(str(posicion)+"."+moneda[0],"-",moneda[2])
 
-#Programa Principal(Prueba)
-data=leer("nombreArchivoLeer.csv")
-escribirToon(data)
-print("-Cantidad de países cargados: "+str(cantidadPaises(data)))
-print()
-mayorPoblacion(data)
-print()
-menorArea(data)
-print()
-print("-Cantidad de monedas descargadas: "+str(cantidadMonedas(data)))
-print()
-monedasMayorValor(data)
-print()
-monedasMenorValor(data)
 
-            
  
     

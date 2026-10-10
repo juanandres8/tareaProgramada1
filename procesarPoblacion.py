@@ -159,7 +159,4 @@ def menorDensidad(paises):
     print("-Los 10 países con menor densidad son:")
     for posicion in range(10):
         print(str(posicion + 1) + ".",densidades[posicion][0],"-",densidades[posicion][1],"hab/km²" )
-#pp
-data = leer("paises.toon")
-paises = obtenerDatos(data)
 
