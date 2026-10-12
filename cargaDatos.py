@@ -49,6 +49,8 @@ def cantidadPaises(data):
     Salidas:
     -Cantidad:Retorna la cantidad de países cargados.
     '''
+    if len(data)==0:
+        return 0
     cantidad=len(data)-1
     return cantidad
 #Definición de función para países con mayor población
@@ -60,7 +62,7 @@ def mayorPoblacion(data):
     Salidas:
     -Muestra en la consola los nombres de los países y la población de los 5 países con mayor población.
     '''
-    paises=data
+    paises=data[:]
     for posicionPais in range(1,len(paises)):
         for posicionComparar in range(posicionPais+1,len(paises)):
             pais=paises[posicionPais].strip().split(";")
@@ -72,7 +74,7 @@ def mayorPoblacion(data):
                 paises[posicionPais]=paises[posicionComparar]
                 paises[posicionComparar]=aux
     print("-Los 5 países con mayor población son: ")
-    for posicion in range(1,6):
+    for posicion in range(1,min(6,len(paises))):
         pais=paises[posicion].strip().split(";")
         print(str(posicion)+"."+pais[0],"-",pais[3])
 #Definición de función para países con menor área
@@ -96,7 +98,7 @@ def menorArea(data):
                 paises[posicionPais]=paises[posicionComparar]
                 paises[posicionComparar]=aux
     print("-Los 5 países con menor área son: ")
-    for posicion in range(1,6):
+    for posicion in range(1,min(6,len(paises))):
         pais=paises[posicion].strip().split(";")
         print(str(posicion)+"."+pais[0],"-",pais[4])
 #Definición función fecha de la tasa de cambio
@@ -170,5 +172,4 @@ def monedasMenorValor(data):
         print(str(posicion)+"."+moneda[0],"-",moneda[2])
 
 
- 
     

@@ -17,7 +17,7 @@
  Codigo Moneda: "BRL"
  Tasa Cambio USD: "5.200393"
 -país:
- Nombre: "Belgica"
+ Nombre: "Bélgica"
  Capital: "Brussels"
  Codigo: "BE"
  Población: "11225469"
@@ -35,7 +35,7 @@
  Codigo Moneda: "CVE"
  Tasa Cambio USD: "97.217599"
 -país:
- Nombre: "Canada"
+ Nombre: "Canadá"
  Capital: "Ottawa"
  Codigo: "CA"
  Población: "35540419"
@@ -107,7 +107,7 @@
  Codigo Moneda: "USD"
  Tasa Cambio USD: "1"
 -país:
- Nombre: "Espana"
+ Nombre: "España"
  Capital: "Madrid"
  Codigo: "ES"
  Población: "46507760"
@@ -170,7 +170,7 @@
  Codigo Moneda: "EUR"
  Tasa Cambio USD: "0.881813"
 -país:
- Nombre: "Japon"
+ Nombre: "Japón"
  Capital: "Tokyo"
  Codigo: "JP"
  Población: "127080000"
@@ -188,7 +188,7 @@
  Codigo Moneda: "EUR"
  Tasa Cambio USD: "0.881813"
 -país:
- Nombre: "Mexico"
+ Nombre: "México"
  Capital: "Mexico City"
  Codigo: "MX"
  Población: "119713203"
@@ -224,7 +224,7 @@
  Codigo Moneda: "THB"
  Tasa Cambio USD: "33.580261"
 -país:
- Nombre: "Turquia"
+ Nombre: "Turquía"
  Capital: "Ankara"
  Codigo: "TR"
  Población: "76667864"
@@ -233,7 +233,7 @@
  Codigo Moneda: "TRY"
  Tasa Cambio USD: "49.048442"
 -país:
- Nombre: "Tunez"
+ Nombre: "Túnez"
  Capital: "Tunis"
  Codigo: "TN"
  Población: "10982754"

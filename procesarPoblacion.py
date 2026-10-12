@@ -37,6 +37,8 @@ def poblacionPromedio(paises):
     '''
     Funcionalidad: Calcula la población promedio.
     '''
+    if len(paises)==0:
+        return 0
     total = poblacionTotal(paises)
     promedio = total / len(paises)
     return promedio
@@ -59,6 +61,8 @@ def medianaPoblacion(paises):
     '''
     Funcionalidad: Calcula la mediana de las poblaciones.
     '''
+    if len(paises)==0:
+        return 0
     poblaciones = []
     for pais in paises:
         poblaciones.append(pais[1])
@@ -146,7 +150,7 @@ def mayorDensidad(paises):
     densidades = obtenerDensidades(paises)
     ordenarDensidades(densidades, True)
     print("-Los 10 países con mayor densidad son:")
-    for posicion in range(10):
+    for posicion in range(min(10,len(densidades))):
         print(str(posicion + 1) + ".",densidades[posicion][0], "-",densidades[posicion][1],"hab/km²" )
 
 # 4. Diez países con menor densidad
@@ -157,6 +161,6 @@ def menorDensidad(paises):
     densidades = obtenerDensidades(paises)
     ordenarDensidades(densidades, False)
     print("-Los 10 países con menor densidad son:")
-    for posicion in range(10):
+    for posicion in range(min(10,len(densidades))):
         print(str(posicion + 1) + ".",densidades[posicion][0],"-",densidades[posicion][1],"hab/km²" )
 
