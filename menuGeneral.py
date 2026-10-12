@@ -177,7 +177,7 @@ def menu():
         elif opcion ==9:
             # Cambia el valor de salir a True para terminar el ciclo while
                 salir=True
-     # Mensaje que aparece al cerrar el menú
-    return print("Menú cerrado")
+    # Mensaje que aparece al cerrar el menú
+    print("Menú cerrado")
 ##pp
 menu()

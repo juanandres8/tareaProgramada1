@@ -127,8 +127,8 @@ def actualizarNombres(data):
             else:
                 archivo.write(linea)
         archivo.close()
-    except:
-        print("ERROR al actualizar el archivo paises.toon")
+    except Exception as error:
+        print("ERROR al actualizar el archivo paises.toon", error)
 
 #Definición función longitud promedio de los nombres
 def longitudPromedio(data):
@@ -143,7 +143,10 @@ def longitudPromedio(data):
     suma=0
     for nombre in nombres:
         suma+=len(nombre)
-    promedio=suma//len(nombres)
+    if len(nombres)>0:
+        promedio=suma//len(nombres)
+    else:
+        promedio=0
     return promedio
 #Definición función país con nombre más largo
 def nombreMasLargo(data):

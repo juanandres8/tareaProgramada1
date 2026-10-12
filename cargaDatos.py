@@ -13,8 +13,8 @@ def leer(nombreArchivoLeer):
         data=archivo.readlines()
         archivo.close()
         return data
-    except:
-        print("Error al leer el archivo: ",nombreArchivoLeer)
+    except Exception as error:
+        print("Error al leer el archivo: ",nombreArchivoLeer,error)
 #Definición de función para crear toon
 def escribirToon(data):
     '''
@@ -38,8 +38,8 @@ def escribirToon(data):
             archivo.write(' Codigo Moneda: \"'+campo[6]+'"\n')
             archivo.write(' Tasa Cambio USD: \"'+campo[7]+'"\n')
         archivo.close()
-    except:
-        print("Error al interactuar con el archivo.Toon: ")
+    except Exception as error:
+        print("Error al interactuar con el archivo.Toon: ",error)
 #Definición de función para cantidad de países cargados
 def cantidadPaises(data):
     '''
@@ -101,7 +101,6 @@ def menorArea(data):
     for posicion in range(1,min(6,len(paises))):
         pais=paises[posicion].strip().split(";")
         print(str(posicion)+"."+pais[0],"-",pais[4])
-#Definición función fecha de la tasa de cambio
 
 #Definición función obtener monedas sin repetir
 def obtenerMonedas(data):

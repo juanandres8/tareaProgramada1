@@ -132,15 +132,14 @@ def ordenarDensidades(densidades, mayor):
     for posicion in range(len(densidades)):
         for comparar in range(posicion + 1, len(densidades)):
             if mayor == True:
-                if densidades[posicion][1] < densidades[comparar][1]:
-                    aux = densidades[posicion]
-                    densidades[posicion] = densidades[comparar]
-                    densidades[comparar] = aux
+                condicion=densidades[posicion][1]<densidades[comparar][1]
             else:
-                if densidades[posicion][1] > densidades[comparar][1]:
+                condicion=densidades[posicion][1]>densidades[comparar][1]
+            if condicion:
                     aux = densidades[posicion]
                     densidades[posicion] = densidades[comparar]
                     densidades[comparar] = aux
+                    
 
 # 3. Diez países con mayor densidad
 def mayorDensidad(paises):
