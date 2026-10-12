@@ -172,8 +172,12 @@ def menu():
             if dataToon is not None:
                 monedas=reporteMonedas.obtenerMonedas(dataToon)
                 reporteMonedas.generarReporteMonedas(monedas)
-            
-
+        elif opcion==7:
+            dataToon = cargaDatos.leer("paises.toon")
+            if dataToon:
+                reporteDensidad.generarReporteDensidad(dataToon)
+            else:
+                print("Error: No se pudo leer el archivo de países.")
         elif opcion ==9:
             # Cambia el valor de salir a True para terminar el ciclo while
                 salir=True
