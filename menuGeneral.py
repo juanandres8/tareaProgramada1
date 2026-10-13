@@ -9,7 +9,9 @@ from procesarPoblacion import *
 import procesarDatosMonedas
 import reportePaises
 import reporteMonedas
+import reporteDensidad
 from datetime import datetime
+import bitacora
 #-------------------------------------------
 
 def menu():
@@ -37,6 +39,7 @@ def menu():
         # Se solicita al usuario que seleccione una opción
         try:
             opcion=int(input("Ingrese una opción: "))
+            bitacora.registrarAccion("Selecciono la opcion " + str(opcion) + " del menu general")
         except ValueError:
             print("Error: Debe ingresar un número.")
             opcion=0
@@ -110,6 +113,7 @@ def menu():
                 mayorDensidad(paises)
                 print()# Muestra los 10 países con menor densidad poblacional
                 menorDensidad(paises)
+                bitacora.registrarAccion("Procesamiento poblacional completado. " + "Cantidad de paises procesados: " + str(len(paises)))
             else:
                 print("Erro: No se pudo leer el archivo de países")
         elif opcion==4:
@@ -159,25 +163,46 @@ def menu():
                     print("No se pueden calcular las tasas.")
                     print("Las monedas solo contienen código y nombre.")
                     print("Falta obtener la tasa de cambio de cada moneda.")
+                bitacora.registrarAccion("Procesamiento de monedas completado. "+ "Cantidad de monedas analizadas: " + str(len(monedas)))
             else:
                 print("ERROR: No se pudo leer el archivo de países.")
-        elif opcion==5:
-            dataToon=cargaDatos.leer("paises.toon")
-            if dataToon is not None:
-                paises=reportePaises.obtenerDatosReporte(dataToon)
-                reportePaises.generarReportePaises(paises)
-                print("Reporte de países generado")
-        elif opcion==6:
-            dataToon=cargaDatos.leer("paises.toon")
-            if dataToon is not None:
-                monedas=reporteMonedas.obtenerMonedas(dataToon)
-                reporteMonedas.generarReporteMonedas(monedas)
-        elif opcion==7:
+        # Opcion 5: Generar reporte de paises en TXT
+        elif opcion == 5:
+            # Leer los datos del archivo paises.toon
             dataToon = cargaDatos.leer("paises.toon")
+            # Verificar que se hayan obtenido los datos
+            if dataToon is not None:
+                # Obtener la informacion de los paises para el reporte
+                paises = reportePaises.obtenerDatosReporte(dataToon)
+                # Generar el archivo TXT con la informacion de los paises
+                reportePaises.generarReportePaises(paises)
+                # Informar que se genero el reporte
+                print("Reporte de países generado")
+        # Opcion 6: Generar reporte de monedas en HTML
+        elif opcion == 6:
+            # Leer los datos del archivo paises.toon
+            dataToon = cargaDatos.leer("paises.toon")
+            # Verificar que se hayan obtenido los datos
+            if dataToon is not None:
+                # Obtener la informacion de las monedas
+                monedas = reporteMonedas.obtenerMonedas(dataToon)
+                # Generar el reporte HTML con los datos de las monedas
+                reporteMonedas.generarReporteMonedas(monedas)
+        # Opcion 7: Generar reporte de densidad poblacional en HTML
+        elif opcion == 7:
+            # Leer los datos del archivo paises.toon
+            dataToon = cargaDatos.leer("paises.toon")
+            # Verificar que el archivo contenga datos
             if dataToon:
+                # Generar el reporte HTML de densidad poblacional
                 reporteDensidad.generarReporteDensidad(dataToon)
             else:
+                # Mostrar un mensaje si no se pudieron leer los datos
                 print("Error: No se pudo leer el archivo de países.")
+        # Opcion 8: Abrir el submenu de bitacora
+        elif opcion == 8:
+            # Mostrar el submenu para consultar y exportar registros
+            bitacora.menuBitacora()
         elif opcion ==9:
             # Cambia el valor de salir a True para terminar el ciclo while
                 salir=True
