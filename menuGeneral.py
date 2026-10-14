@@ -28,7 +28,7 @@ def menu():
         print("==========MENÚ GENERAL==========")
         print("Opcion #1: Cargar datos de países desde archivo")
         print("Opcion #2: Procesar y normalizar nombres de países")
-        print("Opcion #3: rocesar datos poblacionales y geográficos")
+        print("Opcion #3: Procesar datos poblacionales y geográficos")
         print("Opcion #4: Procesar datos de monedas")
         print("Opcion #5: Generar reporte de países en TXT")
         print("Opcion #6: Generar reporte de monedas en HTML")
@@ -39,7 +39,7 @@ def menu():
         # Se solicita al usuario que seleccione una opción
         try:
             opcion=int(input("Ingrese una opción: "))
-            bitacora.registrarAccion("Selecciono la opcion " + str(opcion) + " del menu general")
+            bitacora.registrarAccion("Seleccionó la opción " + str(opcion) + " del menú general")
         except ValueError:
             print("Error: Debe ingresar un número.")
             opcion=0
@@ -56,7 +56,7 @@ def menu():
             print()
             #Fecha y hora de carga de datos
             fecha=datetime.now()
-            print("Fecha y hora de carga:",fecha.strftime("%d/%m/%Y %H:%M:%S"))
+            print("Fecha de la tasa de cambio:",fecha.strftime("%d/%m/%Y %H:%M:%S"))
             print()
             print()  # Muestra la cantidad de monedas diferentes
             print("Cantidad de monedas descargadas:", cargaDatos.cantidadMonedas(data))
@@ -82,7 +82,7 @@ def menu():
                     paisCorto = nombreMasCorto(dataToon)
                     print("-País con nombre más corto: "+ paisCorto+ " - "+ str(len(paisCorto)))
                     print()  # Solicita una letra al usuario
-                    letra = input("Ingrese una letra: ").strip()
+                    letra = input("Ingrese una letra para calcular la cantidad de países que la contienen: ").strip()
                     while len(letra)!=1 or not letra.isalpha():
                         print("ERROR: Debe ingresar una sola letra.")
                         letra= input("Ingrese una letra: ").strip()
@@ -206,6 +206,8 @@ def menu():
         elif opcion ==9:
             # Cambia el valor de salir a True para terminar el ciclo while
                 salir=True
+        else:
+            print("ERROR: Debe seleccionar una opción del 1 al 9.")
     # Mensaje que aparece al cerrar el menú
     print("Menú cerrado")
 ##pp

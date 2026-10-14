@@ -60,11 +60,11 @@ def generarReporteMonedas(monedas):
         archivo.write("<h1>Reporte de Análisis de Monedas</h1>\n")
         # Fecha y hora
         fecha = datetime.now()
-        archivo.write("<p>Fecha de generación: " +fecha.strftime("%d/%m/%Y %H:%M:%S") +"</p>\n")
+        archivo.write("<h2>Fecha de generación: " +fecha.strftime("%d/%m/%Y %H:%M:%S") +"</h2>\n")
         # Estadísticas generales
         totalMonedas = len(monedas)
         promedio = calcularPromedioTasas(monedas)
-        archivo.write("<h2>Estadísticas generales</h2>\n")
+        archivo.write("<h3>Estadísticas generales</h3>\n")
         archivo.write("<p>Total de monedas analizadas: " +str(totalMonedas) + "</p>\n")
         archivo.write("<p>Promedio de tasas de cambio: " +format(promedio, ".4f") + "</p>\n")
         if totalMonedas>0:
