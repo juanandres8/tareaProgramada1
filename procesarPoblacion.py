@@ -163,7 +163,7 @@ def obtenerDensidades(paises):
 
 # Ordenamiento manual de densidades
 def ordenarDensidades(densidades, mayor):
-     '''
+    '''
     Funcionalidad:
     Ordena las densidades poblacionales de los países.
     Entradas:
@@ -205,7 +205,7 @@ def mayorDensidad(paises):
 
 # 4. Diez países con menor densidad
 def menorDensidad(paises):
-     '''
+    '''
     Funcionalidad:
     Muestra los diez países con menor densidad poblacional.
     Entradas:
