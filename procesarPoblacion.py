@@ -25,7 +25,12 @@ def obtenerDatos(data):
 # 1. Población total
 def poblacionTotal(paises):
     '''
-    Funcionalidad: Calcula la población total.
+    Funcionalidad:
+    Calcula la población total de todos los países.
+    Entradas:
+    - paises: Lista de países con sus datos.
+    Salidas:
+    - total: Suma de las poblaciones.
     '''
     total = 0
     for pais in paises:
@@ -35,7 +40,13 @@ def poblacionTotal(paises):
 # 2. Población promedio
 def poblacionPromedio(paises):
     '''
-    Funcionalidad: Calcula la población promedio.
+    Funcionalidad:
+    Calcula la población promedio de los países.
+    Entradas:
+    - paises: Lista de países con sus datos.
+    Salidas:
+    - promedio: Promedio de las poblaciones.
+    - 0: Si la lista está vacía.
     '''
     if len(paises)==0:
         return 0
@@ -46,8 +57,12 @@ def poblacionPromedio(paises):
 # 3. Ordenamiento manual de poblaciones
 def ordenarPoblaciones(poblaciones):
     '''
-    Funcionalidad: Ordena las poblaciones de menor a mayor
-    utilizando ordenamiento manual.
+    Funcionalidad:
+    Ordena las poblaciones de menor a mayor.
+    Entradas:
+    - poblaciones: Lista de cantidades de población.
+    Salidas:
+    - Modifica la lista original y la ordena de menor a mayor.
     '''
     for posicion in range(len(poblaciones)):
         for comparar in range(posicion + 1, len(poblaciones)):
@@ -59,7 +74,13 @@ def ordenarPoblaciones(poblaciones):
 # 3. Mediana
 def medianaPoblacion(paises):
     '''
-    Funcionalidad: Calcula la mediana de las poblaciones.
+    Funcionalidad:
+    Calcula la mediana de las poblaciones de los países.
+    Entradas:
+    - paises: Lista de países con sus datos.
+    Salidas:
+    - mediana: Valor central de las poblaciones ordenadas.
+    - 0: Si la lista está vacía.
     '''
     if len(paises)==0:
         return 0
@@ -77,7 +98,13 @@ def medianaPoblacion(paises):
 # 4 y 5. Clasificación de países
 def clasificarPaises(paises):
     '''
-    Funcionalidad: Clasifica los países según su población.
+    Funcionalidad:
+    Clasifica los países según su población.
+    Entradas:
+    - paises: Lista de países con sus datos.
+    Salidas:
+    - Imprime la cantidad de países de cada categoría:
+      megaciudades, ciudades grandes, medianas y pequeñas.
     '''
     megaciudad = 0
     ciudadGrande = 0
@@ -101,7 +128,12 @@ def clasificarPaises(paises):
 # 1. Área total
 def areaTotal(paises):
     '''
-    Funcionalidad: Calcula el área total de todos los países.
+    Funcionalidad:
+    Calcula el área total de todos los países.
+    Entradas:
+    - paises: Lista de países con sus datos.
+    Salidas:
+    - total: Suma de las áreas.
     '''
     total = 0
     for pais in paises:
@@ -111,7 +143,12 @@ def areaTotal(paises):
 # 2. Calcular densidades
 def obtenerDensidades(paises):
     '''
-    Funcionalidad: Calcula la densidad poblacional de cada país.
+    Funcionalidad:
+    Calcula la densidad poblacional de cada país.
+    Entradas:
+    - paises: Lista de países con sus datos.
+    Salidas:
+    - densidades: Lista con el nombre de cada país y su densidad poblacional.
     '''
     densidades = []
     for pais in paises:
@@ -126,9 +163,17 @@ def obtenerDensidades(paises):
 
 # Ordenamiento manual de densidades
 def ordenarDensidades(densidades, mayor):
+     '''
+    Funcionalidad:
+    Ordena las densidades poblacionales de los países.
+    Entradas:
+    - densidades: Lista con los nombres de los países y sus densidades.
+    - mayor: Booleano que indica si se ordena de mayor a menor (True)
+      o de menor a mayor (False).
+    Salidas:
+    - Modifica la lista original según el orden solicitado.
     '''
-    Funcionalidad: Ordena las densidades manualmente.
-    '''
+
     for posicion in range(len(densidades)):
         for comparar in range(posicion + 1, len(densidades)):
             if mayor == True:
@@ -144,7 +189,13 @@ def ordenarDensidades(densidades, mayor):
 # 3. Diez países con mayor densidad
 def mayorDensidad(paises):
     '''
-    Funcionalidad: Muestra los 10 países con mayor densidad.
+    Funcionalidad:
+    Muestra los diez países con mayor densidad poblacional.
+    Entradas:
+    - paises: Lista de países con sus datos.
+    Salidas:
+    - Imprime los nombres y las densidades de los diez países
+      con mayor densidad, o de todos si hay menos de diez.
     '''
     densidades = obtenerDensidades(paises)
     ordenarDensidades(densidades, True)
@@ -154,8 +205,14 @@ def mayorDensidad(paises):
 
 # 4. Diez países con menor densidad
 def menorDensidad(paises):
-    '''
-    Funcionalidad: Muestra los 10 países con menor densidad.
+     '''
+    Funcionalidad:
+    Muestra los diez países con menor densidad poblacional.
+    Entradas:
+    - paises: Lista de países con sus datos.
+    Salidas:
+    - Imprime los nombres y las densidades de los diez países
+      con menor densidad, o de todos si hay menos de diez.
     '''
     densidades = obtenerDensidades(paises)
     ordenarDensidades(densidades, False)
